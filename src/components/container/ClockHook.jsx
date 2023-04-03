@@ -12,9 +12,11 @@ export const ClockHook = () => {
 
     useEffect(() => {
         function tick(){
-            setPersona({...persona, fecha:new Date(), edad: (persona.edad+1) });
+            setPersona({...persona, fecha:new Date(), edad: (persona.edad)+1 });
         }
+
         const timerID = setInterval (() => tick(), 1000);
+
     }, [persona]);
 
     return (
