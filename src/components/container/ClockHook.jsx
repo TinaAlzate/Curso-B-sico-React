@@ -14,9 +14,7 @@ export const ClockHook = () => {
         function tick(){
             setPersona({...persona, fecha:new Date(), edad: (persona.edad)+1 });
         }
-
-        const timerID = setInterval (() => tick(), 1000);
-
+        const time = setInterval (() => tick(), 1000);
     }, [persona]);
 
     return (
