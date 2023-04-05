@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import Father from './components/container/father';
 // import { ClockHook } from './components/container/ClockHook';
 // import CuartoEjemplo from './hooks/CuartoEjemplo';
 // import EjemploTutoria from './hooks/EjemploTutoria';
@@ -12,7 +13,7 @@ import './App.css';
 // import Clock from './components/container/Clock';
 // import ContactoComponent from '../src/components/pure/contacto.jsx'
 // import { Contacto } from './models/contacto.class';
-import TaskListComponent from './components/container/task_list';
+// import TaskListComponent from './components/container/task_list';
 
 function App() {
   // const nuevoContact = new Contacto('Valentina', 'Alzate', 'valzate618@gmail.com', true)
@@ -42,7 +43,9 @@ function App() {
         {/* <Clock></Clock> */}
         {/* <ClockHook></ClockHook> */}
         {/* </header> */}
-        <TaskListComponent></TaskListComponent>
+        {/* Gestión de eventos */}
+        <Father></Father>
+        {/* <TaskListComponent></TaskListComponent> */}
     </div>
   );
 }
