@@ -25,6 +25,34 @@ const TaskListComponent = () => {
         };
     }, [tasks]);
 
+    
+    function completeTask(task){
+        console.log('Complete this task', task)
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks];
+        tempTasks[index].completed = !tempTasks[index].completed
+        //Estamos actualizando el estado el componente con la nueva lista de tareas, so se actualiza 
+        //la iteracion en el map que estamos haciendo por tanto actualiza la tarea y se muestra actualizada
+        //Como los estados son inmutables entonces generamos uno nuevo y le damos el nuevo valor
+        setTasks(tempTasks)
+    }
+
+    function deleteTask(task){
+        console.log('Remove this task', task)
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks];
+        tempTasks.splice(index,1);
+        setTasks(tempTasks);
+    }
+
+    function addTask(task){
+        console.log('Add this task', task)
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks];
+        tempTasks.push(task)
+        setTasks(tempTasks);
+    }
+
     return (
         <div>
             <div className='col-12'>
@@ -46,15 +74,20 @@ const TaskListComponent = () => {
                                 {/* TODO: Iterar sobre una lista de tareas */}
                                 { tasks.map((task, index) => {
                                     return (
-                                        <TaskComponent key={index} task={task}></TaskComponent>
+                                        <TaskComponent 
+                                            key={index} 
+                                            task={task}
+                                            complete={completeTask}
+                                            remove = {deleteTask}>
+                                        </TaskComponent>
                                     )
                                 })}
                             </tbody>
                         </table>
                     </div>
-                    <TaskForm></TaskForm>
                 </div>
             </div>
+            <TaskForm add={addTask}></TaskForm>
         </div>
     );
 };

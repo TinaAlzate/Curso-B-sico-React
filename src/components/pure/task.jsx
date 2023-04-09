@@ -5,7 +5,7 @@ import { Task } from '../../models/task.class';
 //Importamos la hoja de estilos de task.scss
 import '../../styles/task.scss'
 
-const TaskComponent = ({task}) => {
+const TaskComponent = ({task, complete, remove}) => {
 
     useEffect(() => {
         console.log('Create task')
@@ -55,9 +55,9 @@ const TaskComponent = ({task}) => {
 
     function taskCompletedIcon(){
         if(task.completed){
-            return (<i className='bi-toggle-on' style={{color:'green', fontSize: '2rem'}}></i>)
+            return (<i onClick={() => complete(task)} className='bi-toggle-on task-action' style={{color:'green', fontSize: '2rem'}}></i>)
         }else{
-            (<i className='bi-toggle-off' style={{color:'grey', fontSize: '2rem'}}></i>)
+            return (<i onClick={() => complete(task)} className='bi-toggle-off task-action' style={{color:'grey', fontSize: '2rem'}}></i>)
         }
     }
 
@@ -78,13 +78,16 @@ const TaskComponent = ({task}) => {
             <td className='aling-middle'>
             {/* Execution of function to return icon depending on completion*/}
             { taskCompletedIcon() }
+            <i onClick={() => remove(task)}className='bi-trash task-action' style={{color:'tomato', fontSize:'2rem'}}></i>
             </td>
         </tr>
     );
 };
 TaskComponent.propTypes = {
     //La siguiente linea de codigo indica que es una instancia que va a recibir una tarea y no un strig por ejemplo
-    task: PropTypes.instanceOf(Task)
+    task: PropTypes.instanceOf(Task).isRequired,
+    complete: PropTypes.func.isRequired,
+    remove:PropTypes.func.isRequired
 };
 
 
