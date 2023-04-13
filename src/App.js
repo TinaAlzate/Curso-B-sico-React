@@ -11,7 +11,8 @@ import './App.css';
 // import FGreeting from './components/pure/fGreeting'
 // import GreetingStyled from './components/pure/greetingStyled';
 // import Clock from './components/container/Clock';
-import TaskListComponent from './components/container/task_list';
+// import TaskListComponent from './components/container/task_list';
+// import OptionalRender from './components/pure/optionalRender';
 
 function App() {
   // const nuevoContact = new Contacto('Valentina', 'Alzate', 'valzate618@gmail.com', true)
@@ -40,8 +41,11 @@ function App() {
         {/* <ClockHook></ClockHook> */}
         {/* Gestión de eventos */}
         {/* <Father></Father> */}
-        {/* Componente de listado de tareas */}
-        <TaskListComponent></TaskListComponent>
+        {/* Ejemplos de renderizado condicional */}
+        {/* <OptionalRender></OptionalRender> */}
+        {/* Ejemplos uso de formik y yup */}
+        {/* PROYECTO FINAL */}
+        {/* <TaskListComponent></TaskListComponent> */}
         {/* </header> */}
     </div>
   );
