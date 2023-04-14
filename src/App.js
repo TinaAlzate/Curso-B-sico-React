@@ -1,5 +1,9 @@
 // import logo from './logo.svg';
 import './App.css';
+import Formikcreate from './components/pure/forms/Formikcreate';
+// import Registerformik from './components/pure/forms/Registerformik';
+// import Formiklogin from './components/pure/forms/Formiklogin';
+// import Formikregister from './components/pure/forms/Formikregister';
 // import Father from './components/container/father';
 // import { ClockHook } from './components/container/ClockHook';
 // import CuartoEjemplo from './hooks/CuartoEjemplo';
@@ -44,6 +48,10 @@ function App() {
         {/* Ejemplos de renderizado condicional */}
         {/* <OptionalRender></OptionalRender> */}
         {/* Ejemplos uso de formik y yup */}
+        {/* <Formiklogin></Formiklogin> */}
+        {/* <Formikregister></Formikregister> */}
+        {/* <Registerformik></Registerformik> */}
+        <Formikcreate></Formikcreate>
         {/* PROYECTO FINAL */}
         {/* <TaskListComponent></TaskListComponent> */}
         {/* </header> */}
