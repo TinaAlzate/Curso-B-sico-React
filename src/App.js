@@ -51,7 +51,7 @@ function App() {
         {/* <Formiklogin></Formiklogin> */}
         {/* <Formikregister></Formikregister> */}
         {/* <Registerformik></Registerformik> */}
-        <Formikcreate></Formikcreate>
+        {/* <Formikcreate></Formikcreate> */}
         {/* PROYECTO FINAL */}
         {/* <TaskListComponent></TaskListComponent> */}
         {/* </header> */}
