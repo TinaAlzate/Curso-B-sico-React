@@ -31,7 +31,7 @@ function AppRoutingFinal() {
         {
           loggedIn 
           ? <Route path="/dashboard" element={ <DashBoard/> }/> 
-          : <Route path='/dashboard' element={ <Navigate to='/login'/> }/>
+          : <Route path='/dashboard' element={ <Navigate to='/login'/> }/   >
         }
         </Route>
         <Route path="*" element={<NotFoundPage/>} />
